@@ -1,3 +1,8 @@
+@use 'variables' as *;
+@use 'components/app';
+@use 'components/advice-card';
+@use 'components/advice-button';
+
 *,
 *::before,
 *::after {
@@ -6,4 +11,13 @@
 
 body {
   margin: 0;
+  background-color: $color-dark-blue;
+  color: $color-light-cyan;
+  font-family: $font-family;
+  font-weight: $font-weight-extra-bold;
+}
+
+h1,
+h2 {
+  font-weight: inherit;
 }

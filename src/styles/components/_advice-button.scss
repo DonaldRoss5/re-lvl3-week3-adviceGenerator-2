@@ -1,0 +1,35 @@
+@use '../variables' as *;
+
+.advice-button {
+  display: grid;
+  place-items: center;
+  width: $button-size;
+  height: $button-size;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background-color: $color-neon-green;
+  cursor: pointer;
+  transition: box-shadow 0.2s ease;
+
+  &:hover:not(:disabled),
+  &:focus-visible {
+    box-shadow: 0 0 40px $color-neon-green;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $color-light-cyan;
+    outline-offset: 4px;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  &__icon {
+    display: block;
+    width: 24px;
+    height: 24px;
+  }
+}
