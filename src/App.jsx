@@ -19,7 +19,7 @@ function App() {
   const { id, advice } = sampleAdvice[adviceIndex]
 
   function handleNewAdvice() {
-    setAdviceIndex((currentIndex) => getNextIndex(currentIndex))
+    setAdviceIndex(getNextIndex(adviceIndex))
   }
 
   return (
